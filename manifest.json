@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Eggcave extension",
+    "version": "2.1",
+    "description": "Various QOL tweaks for Eggcave",
+  
+    "icons": {
+        "16": "images/dragold-16.png",
+        "32": "images/dragold-32.png",
+        "48": "images/dragold-48.png",
+        "128": "images/dragold-128.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/haggle.js"],
+            "matches": [
+                "https://eggcave.com/shops/haggle/*"
+            ]
+        },
+        {
+            "js": ["scripts/stock.js"],
+            "matches": [
+                "https://eggcave.com/shops/general-food-store",
+                "https://eggcave.com/shops/travel-agency",
+                "https://eggcave.com/shops/toy-shop",
+                "https://eggcave.com/shops/bakery",
+                "https://eggcave.com/shops/leila-library",
+                "https://eggcave.com/shops/finleys-flavors"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "eggcave-tweaks@blurplepanda.com"
+  }
+}
+
+}
